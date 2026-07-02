@@ -9,9 +9,10 @@ ECO_CI_TXT_CLEAR="\e[0m"
 
 ECO_CI_DISPLAY_BADGE='true'
 ECO_CI_DISPLAY_TABLE='true'
+ECO_CI_DISPLAY_UNIT='Wh' # Options: J (Joules), Wh (watt-hours), kWh (kilowatt-hours)
 ECO_CI_JSON_OUTPUT='true' # must be set again here and should be identical to jenkins_start
 
-$shell "$(dirname "$0")/../display_results.sh" display_results $ECO_CI_DISPLAY_TABLE $ECO_CI_DISPLAY_BADGE
+$shell "$(dirname "$0")/../display_results.sh" display_results $ECO_CI_DISPLAY_TABLE $ECO_CI_DISPLAY_BADGE $ECO_CI_DISPLAY_UNIT
 
 if [[ "$ECO_CI_JSON_OUTPUT" == 'true' ]]; then
     echo "JSON Dump:"

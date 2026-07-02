@@ -43,7 +43,7 @@ inputs:
     required: false
   display-unit:
     description: 'Unit for energy values in the table and PR comment output. Options: J (Joules), Wh (watt-hours), kWh (kilowatt-hours)'
-    default: 'J'
+    default: 'Wh'
     required: false
   json-output:
     description: 'Output measurement data also as JSON artifacts'

@@ -2,7 +2,7 @@ variables:
   ECO_CI_SEND_DATA: "true"
   ECO_CI_DISPLAY_BADGE: "true"
   ECO_CI_DISPLAY_TABLE: "true"
-  ECO_CI_DISPLAY_UNIT: "J"
+  ECO_CI_DISPLAY_UNIT: "Wh"
   ECO_CI_SHOW_CARBON: "true"
   ECO_CI_FILTER_TYPE: "machine.ci"
   ECO_CI_FILTER_PROJECT: "CI/CD"

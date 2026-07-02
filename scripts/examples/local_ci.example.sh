@@ -6,6 +6,7 @@ shell=bash
 ECO_CI_SEND_DATA='false'
 ECO_CI_DISPLAY_BADGE='true'
 ECO_CI_DISPLAY_TABLE='true'
+ECO_CI_DISPLAY_UNIT='Wh' # Options: J (Joules), Wh (watt-hours), kWh (kilowatt-hours)
 
 ECO_CI_WORKFLOW_ID='YOUR_WORKFLOW_ID'
 ECO_CI_SOURCE='local'
@@ -100,7 +101,7 @@ echo "Duration: "$(($(date "+%s%6N") - $(cat /tmp/eco-ci/timer-total.txt))) "us"
 ECO_CI_FORMAT_CLR="\e[44m"
 ECO_CI_TXT_CLEAR="\e[0m"
 
-$shell "$(dirname "$0")/../display_results.sh" display_results $ECO_CI_DISPLAY_TABLE $ECO_CI_DISPLAY_BADGE
+$shell "$(dirname "$0")/../display_results.sh" display_results $ECO_CI_DISPLAY_TABLE $ECO_CI_DISPLAY_BADGE $ECO_CI_DISPLAY_UNIT
 
 if [[ "$ECO_CI_JSON_OUTPUT" == 'true' ]]; then
     echo "JSON Dump:"
